@@ -109,7 +109,7 @@ def time_stats(df, month, day):
     else:
         print('Most popular start hour: {} pm'.format(df['Start Time'].dt.hour.mode()[0] - 12))
 
-    print("\nThis took %s seconds." % round((time.time() - start_time), 4))
+    print("\nThis took %s seconds." % round((time.time() - start_time), 3))
     print('-'*40)
 
 
@@ -132,7 +132,7 @@ def station_stats(df):
     print('Most popular trip: From {} to {}\n'.format(route.idxmax()[0], route.idxmax()[1]))
     print(route.head(5).to_string())
 
-    print("\nThis took %s seconds." % round((time.time() - start_time), 4))
+    print("\nThis took %s seconds." % round((time.time() - start_time), 3))
     print('-'*40)
 
 
@@ -161,7 +161,7 @@ def trip_duration_stats(df):
         )
     )
 
-    print("\nThis took %s seconds." % round((time.time() - start_time), 4))
+    print("\nThis took %s seconds." % round((time.time() - start_time), 3))
     print('-'*40)
 
 
@@ -191,7 +191,7 @@ def user_stats(df, city):
         print('Most common\t', df['Birth Year'].mode()[0].astype(int))
         print('Most recent\t', df['Birth Year'].max().astype(int))
 
-    print("\nThis took %s seconds." % round((time.time() - start_time), 4))
+    print("\nThis took %s seconds." % round((time.time() - start_time), 3))
     print('-'*40)
 
 
