@@ -6,7 +6,7 @@ README: 19 February 2019
 Explore US Bikeshare Data
 
 ### Description
-Describe what your project is about and what it does
+To determine some descriptive statistics using bikeshare data from Chicago, New York, and Washington.
 
 ### Files used
 Include the files used
