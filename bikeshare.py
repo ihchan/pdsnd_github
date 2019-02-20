@@ -24,7 +24,7 @@ def get_filters():
         if city in ('chicago', 'new york', 'washington'):
             print()
             break
-        print('Input error. Please try again')
+        print('Input error. Please try again.')
 
     # User input - filter by month and day if requested
     filter_type = None
