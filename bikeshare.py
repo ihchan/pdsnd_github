@@ -24,7 +24,7 @@ def get_filters():
         if city in ('chicago', 'new york', 'washington'):
             print()
             break
-        print('Input error. Please try again')
+        print('Input error. Please try again.')
 
     # User input - filter by month and day if requested
     filter_type = None
@@ -45,7 +45,7 @@ def get_filters():
             print('Input error. Please try again.')
     if filter_type in ('day', 'both'):
         while True:
-            day = input('Which day - Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday?\n').lower()
+            day = input('Which day of the week - Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday?\n').lower()
             if day in ('monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'):
                 print()
                 break
@@ -109,7 +109,7 @@ def time_stats(df, month, day):
     else:
         print('Most popular start hour: {} pm'.format(df['Start Time'].dt.hour.mode()[0] - 12))
 
-    print("\nThis took %s seconds." % round((time.time() - start_time), 4))
+    print("\nThis took %s seconds." % round((time.time() - start_time), 3))
     print('-'*40)
 
 
@@ -132,7 +132,7 @@ def station_stats(df):
     print('Most popular trip: From {} to {}\n'.format(route.idxmax()[0], route.idxmax()[1]))
     print(route.head(5).to_string())
 
-    print("\nThis took %s seconds." % round((time.time() - start_time), 4))
+    print("\nThis took %s seconds." % round((time.time() - start_time), 3))
     print('-'*40)
 
 
@@ -161,7 +161,7 @@ def trip_duration_stats(df):
         )
     )
 
-    print("\nThis took %s seconds." % round((time.time() - start_time), 4))
+    print("\nThis took %s seconds." % round((time.time() - start_time), 3))
     print('-'*40)
 
 
@@ -191,7 +191,7 @@ def user_stats(df, city):
         print('Most common\t', df['Birth Year'].mode()[0].astype(int))
         print('Most recent\t', df['Birth Year'].max().astype(int))
 
-    print("\nThis took %s seconds." % round((time.time() - start_time), 4))
+    print("\nThis took %s seconds." % round((time.time() - start_time), 3))
     print('-'*40)
 
 
