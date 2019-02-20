@@ -45,7 +45,7 @@ def get_filters():
             print('Input error. Please try again.')
     if filter_type in ('day', 'both'):
         while True:
-            day = input('Which day - Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday?\n').lower()
+            day = input('Which day of the week - Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday?\n').lower()
             if day in ('monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'):
                 print()
                 break
